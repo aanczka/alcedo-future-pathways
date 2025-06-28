@@ -1,36 +1,8 @@
 
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Facebook, Linkedin, Twitter, Send, Clock, Users } from 'lucide-react';
+import React from 'react';
+import { Mail, Phone, MapPin, Facebook, Linkedin, Twitter, Clock, Users } from 'lucide-react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-  };
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -45,144 +17,60 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Form and Info */}
+      {/* Contact Information */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* Contact Details */}
             <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
-                    placeholder="Enter your email address"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject *
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
-                  >
-                    <option value="">Select a subject</option>
-                    <option value="course-inquiry">Course Inquiry</option>
-                    <option value="enrollment">Enrollment Information</option>
-                    <option value="partnership">Partnership Opportunities</option>
-                    <option value="general">General Information</option>
-                    <option value="technical-support">Technical Support</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
-                    placeholder="Enter your message here..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center group"
-                >
-                  <Send className="h-5 w-5 mr-2 group-hover:translate-x-1 transition-transform duration-200" />
-                  Send Message
-                </button>
-              </form>
-            </div>
-
-            {/* Contact Information */}
-            <div className="space-y-8">
-              {/* Contact Details */}
-              <div className="bg-white rounded-xl shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
-                
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <Mail className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <div className="ml-4">
-                      <h3 className="text-lg font-semibold text-gray-900">Email</h3>
-                      <p className="text-gray-600">info@alcedo-education.com</p>
-                      <p className="text-gray-600">contact@alcedo-education.com</p>
-                    </div>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-blue-600" />
                   </div>
-
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                      <Phone className="h-6 w-6 text-green-600" />
-                    </div>
-                    <div className="ml-4">
-                      <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
-                      <p className="text-gray-600">+48 123 456 789</p>
-                      <p className="text-sm text-gray-500">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900">Email</h3>
+                    <p className="text-gray-600">info@alcedo-education.com</p>
+                    <p className="text-gray-600">contact@alcedo-education.com</p>
                   </div>
+                </div>
 
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                      <MapPin className="h-6 w-6 text-purple-600" />
-                    </div>
-                    <div className="ml-4">
-                      <h3 className="text-lg font-semibold text-gray-900">Address</h3>
-                      <p className="text-gray-600">
-                        ALCEDO Adult Education Centre<br />
-                        Educational District<br />
-                        Warsaw, Poland
-                      </p>
-                    </div>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-green-600" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
+                    <p className="text-gray-600">+48 123 456 789</p>
+                    <p className="text-sm text-gray-500">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <MapPin className="h-6 w-6 text-purple-600" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900">Address</h3>
+                    <p className="text-gray-600">
+                      ALCEDO Adult Education Centre<br />
+                      Educational District<br />
+                      Warsaw, Poland
+                    </p>
                   </div>
                 </div>
               </div>
+            </div>
 
+            {/* Social Media and Info */}
+            <div className="space-y-8">
               {/* Social Media */}
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Connect With Us</h2>
                 
-                <div className="flex space-x-4">
+                <div className="flex space-x-4 mb-6">
                   <a
                     href="#"
                     className="w-12 h-12 bg-blue-600 text-white rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
@@ -206,7 +94,7 @@ const Contact = () => {
                   </a>
                 </div>
 
-                <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+                <div className="p-4 bg-gray-50 rounded-lg">
                   <div className="flex items-center text-sm text-gray-600 mb-2">
                     <Clock className="h-4 w-4 mr-2" />
                     <span>Response Time: Within 24 hours</span>
