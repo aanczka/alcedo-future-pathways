@@ -32,8 +32,7 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">info@alcedo-education.com</p>
-                    <p className="text-gray-600">contact@alcedo-education.com</p>
+                    <p className="text-gray-600">alcedo.aec@gmail.com</p>
                   </div>
                 </div>
 
@@ -43,7 +42,7 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+48 123 456 789</p>
+                    <p className="text-gray-600">+48 720 764 008</p>
                     <p className="text-sm text-gray-500">Monday - Friday: 9:00 AM - 6:00 PM</p>
                   </div>
                 </div>
@@ -56,8 +55,8 @@ const Contact = () => {
                     <h3 className="text-lg font-semibold text-gray-900">Address</h3>
                     <p className="text-gray-600">
                       ALCEDO Adult Education Centre<br />
-                      Educational District<br />
-                      Warsaw, Poland
+                      Widok 9a<br />
+                      08-110 Siedlce, Poland
                     </p>
                   </div>
                 </div>
