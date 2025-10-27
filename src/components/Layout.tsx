@@ -35,7 +35,7 @@ const Layout = ({ children }: LayoutProps) => {
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <Link to="/" className="flex items-center">
-                <img src={alcedoLogo} alt="ALCEDO Adult Education Centre" className="h-12" />
+                <img src={alcedoLogo} alt="ALCEDO Adult Education Centre" className="h-16" />
               </Link>
             </div>
 
@@ -100,7 +100,7 @@ const Layout = ({ children }: LayoutProps) => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center mb-4">
-                <img src={alcedoLogo} alt="ALCEDO Adult Education Centre" className="h-16" />
+                <img src={alcedoLogo} alt="ALCEDO Adult Education Centre" className="h-20" />
               </div>
               <p className="text-gray-300 mb-4">
                 Dedicated to education and personal development through expert-led courses
