@@ -205,7 +205,7 @@ const Home = () => {
                     {item.description}
                   </p>
                   <Link
-                    to="#"
+                    to="/contact"
                     className="inline-flex items-center text-primary font-medium hover:underline group"
                   >
                     Read More
