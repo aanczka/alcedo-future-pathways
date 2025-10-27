@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, TrendingUp, Apple, Brain, ArrowRight, Users, Award, Globe, Calendar, Clock } from 'lucide-react';
+import { BookOpen, TrendingUp, Apple, Brain, ArrowRight, Users, Award, Globe, Calendar } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Home = () => {
@@ -56,18 +56,21 @@ const Home = () => {
 
   const newsItems = [
     {
+      id: 'ai-integration-workshop',
       date: '2025-10-15',
       title: 'New AI Integration in Education Workshop',
       description: 'Join us for an exciting workshop on integrating artificial intelligence tools into modern teaching methodologies. Learn practical applications and best practices.',
       category: 'Education',
     },
     {
+      id: 'career-development-summit',
       date: '2025-10-10',
       title: 'Career Development Summit 2025',
       description: 'Our annual career development summit brings together industry leaders and professionals to discuss the latest trends in leadership and entrepreneurship.',
       category: 'Career',
     },
     {
+      id: 'nutrition-certification',
       date: '2025-10-05',
       title: 'Nutrition for Athletes Certification Program',
       description: 'New certification program launching next month. Designed for fitness professionals and nutritionists looking to specialize in sports nutrition.',
@@ -205,7 +208,7 @@ const Home = () => {
                     {item.description}
                   </p>
                   <Link
-                    to="/contact"
+                    to={`/news/${item.id}`}
                     className="inline-flex items-center text-primary font-medium hover:underline group"
                   >
                     Read More
