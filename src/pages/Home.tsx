@@ -1,8 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, TrendingUp, Apple, Brain, ArrowRight, Users, Award, Globe, Calendar, Clock } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { BookOpen, TrendingUp, Apple, Brain, ArrowRight, Users, Award, Globe } from 'lucide-react';
 
 const Home = () => {
   const categories = [
@@ -51,27 +50,6 @@ const Home = () => {
       icon: Globe,
       title: 'Modern Programs',
       description: 'Up-to-date training programs that meet evolving educational needs',
-    },
-  ];
-
-  const newsItems = [
-    {
-      date: '2025-10-15',
-      title: 'New AI Integration in Education Workshop',
-      description: 'Join us for an exciting workshop on integrating artificial intelligence tools into modern teaching methodologies. Learn practical applications and best practices.',
-      category: 'Education',
-    },
-    {
-      date: '2025-10-10',
-      title: 'Career Development Summit 2025',
-      description: 'Our annual career development summit brings together industry leaders and professionals to discuss the latest trends in leadership and entrepreneurship.',
-      category: 'Career',
-    },
-    {
-      date: '2025-10-05',
-      title: 'Nutrition for Athletes Certification Program',
-      description: 'New certification program launching next month. Designed for fitness professionals and nutritionists looking to specialize in sports nutrition.',
-      category: 'Nutrition',
     },
   ];
 
@@ -171,49 +149,6 @@ const Home = () => {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* News Section */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Latest News & Events
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Stay updated with our latest programs, events, and educational insights
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {newsItems.map((item, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                    <Calendar className="h-4 w-4" />
-                    <span>{new Date(item.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
-                  </div>
-                  <CardTitle className="text-xl">{item.title}</CardTitle>
-                  <CardDescription className="text-sm font-medium text-primary">
-                    {item.category}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    {item.description}
-                  </p>
-                  <Link
-                    to="#"
-                    className="inline-flex items-center text-primary font-medium hover:underline group"
-                  >
-                    Read More
-                    <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>

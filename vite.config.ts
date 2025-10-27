@@ -1,17 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'path'
-import tsconfigPaths from 'vite-tsconfig-paths'
+import path from 'path'  // <-- import path
 
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
+  plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
+      '@': path.resolve(__dirname, 'src'),  // <-- Add this line
     },
-  },
-  server: {
-    port: 8080
   },
   build: {
     outDir: 'dist'
