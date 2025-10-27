@@ -1,8 +1,9 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, GraduationCap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import alcedoLogo from '@/assets/alcedo-logo.png';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -33,9 +34,8 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <Link to="/" className="flex items-center space-x-2">
-                <GraduationCap className="h-8 w-8 text-blue-600" />
-                <span className="text-xl font-bold text-gray-900">ALCEDO</span>
+              <Link to="/" className="flex items-center">
+                <img src={alcedoLogo} alt="ALCEDO Adult Education Centre" className="h-12" />
               </Link>
             </div>
 
@@ -99,9 +99,8 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
-                <GraduationCap className="h-8 w-8 text-blue-400" />
-                <span className="text-xl font-bold">ALCEDO Adult Education Centre</span>
+              <div className="flex items-center mb-4">
+                <img src={alcedoLogo} alt="ALCEDO Adult Education Centre" className="h-16" />
               </div>
               <p className="text-gray-300 mb-4">
                 Dedicated to education and personal development through expert-led courses
